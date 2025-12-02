@@ -5,7 +5,7 @@ Welcome to my collection of **TryHackMe**, **CTF**, and **Pentesting** walkthrou
 
 ## 📘 Available Walkthroughs
 
-- [MACHINE NAME](/walkthroughs/web.md)
+- [MACHINE NAME](/walkthrough/web.md)
 - More machines coming soon...
 
 ---
