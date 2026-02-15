@@ -6,7 +6,7 @@ Welcome to my collection of **TryHackMe**, **CTF**, and **Pentesting** walkthrou
 ## 📘 Available Walkthroughs
 
 - [MACHINE NAME](/walkthrough/web.md)
-- [MACHINE NAME](/walkthrough/lsweb.html)
+- [Linus Tool](/walkthrough/lsweb.html)
 - More machines coming soon...
 
 ---
