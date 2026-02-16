@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux cp Command - Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #7dd3fc; border-bottom: 1px solid #1e293b; padding-bottom: 5px; }
+        h3 { color: #bae6fd; }
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            border-left: 4px solid #38bdf8;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background-color: #020617; color: #38bdf8; }
+        tr:nth-child(even) { background-color: #020617; }
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Linux Command: cp</h1>
+    <p>Complete Beginner to Advanced Guide</p>
+</header>
+
+<div class="container">
+
+    <h2>📌 Overview</h2>
+    <p>The <strong>cp</strong> (Copy) command is used to copy files and directories from one location to another in Linux. It is a core file management command used in daily system operations.</p>
+    
+    <div class="tag">Category: File Management</div>
+    <div class="tag">Difficulty: Beginner</div>
+
+    <h2>🧾 Syntax</h2>
+    <div class="code">cp [OPTIONS] SOURCE DESTINATION</div>
+    <p>The source is the file or directory you want to copy, and the destination is where you want the copy to be placed.</p>
+
+    <h2>🟢 Basic cp Commands (Beginner)</h2>
+
+    <h3>1. Copy a File</h3>
+    <div class="code">cp file.txt backup.txt</div>
+    <p>Creates a copy of <strong>file.txt</strong> named <strong>backup.txt</strong> in the same directory.</p>
+
+    <h3>2. Copy File to Another Directory</h3>
+    <div class="code">cp file.txt /home/user/Documents/</div>
+    <p>Copies the file into the specified directory.</p>
+
+    <h3>3. Copy Multiple Files</h3>
+    <div class="code">cp file1.txt file2.txt /home/user/Documents/</div>
+    <p>Copies multiple files into a target directory.</p>
+
+    <h3>4. Copy a Directory (Recursive)</h3>
+    <div class="code">cp -r folder/ backup_folder/</div>
+    <p>Copies an entire directory and its contents. The <strong>-r</strong> option is required for directories.</p>
+
+    <h2>🟡 Intermediate Options</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>cp -i file.txt dest/</td>
+            <td>Prompt before overwriting existing files</td>
+        </tr>
+        <tr>
+            <td>cp -u file.txt dest/</td>
+            <td>Copy only if the source is newer than destination</td>
+        </tr>
+        <tr>
+            <td>cp -v file.txt dest/</td>
+            <td>Show verbose output of files being copied</td>
+        </tr>
+        <tr>
+            <td>cp -n file.txt dest/</td>
+            <td>Do not overwrite existing files</td>
+        </tr>
+    </table>
+
+    <h2>🔵 Advanced cp Options (Pro Level)</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td>cp -a source/ dest/</td>
+            <td>Archive mode (preserves permissions, timestamps, and structure)</td>
+        </tr>
+        <tr>
+            <td>cp -p file.txt dest/</td>
+            <td>Preserve file attributes (ownership, timestamps)</td>
+        </tr>
+        <tr>
+            <td>cp --backup file.txt dest/</td>
+            <td>Create a backup before overwriting files</td>
+        </tr>
+        <tr>
+            <td>cp --parents file.txt dest/</td>
+            <td>Preserve directory structure while copying</td>
+        </tr>
+    </table>
+
+    <h2>🔥 Real-World Examples</h2>
+
+    <h3>Backup Important File</h3>
+    <div class="code">cp important.conf important.conf.bak</div>
+
+    <h3>Copy Folder to Another Location</h3>
+    <div class="code">cp -r Projects/ /home/user/Backup/</div>
+
+    <h3>Copy with Verbose Output</h3>
+    <div class="code">cp -rv source_folder/ destination_folder/</div>
+
+    <h2>⚠️ Overwriting Behavior</h2>
+    <p>By default, <strong>cp</strong> will overwrite files in the destination without warning. Use <strong>-i</strong> to get a confirmation prompt before overwriting.</p>
+
+    <h2>🧠 Pro Tips for Beginners</h2>
+    <ul>
+        <li>Always use <strong>-r</strong> when copying directories</li>
+        <li>Use <strong>-i</strong> to avoid accidental overwrites</li>
+        <li>Use <strong>-a</strong> for backups and system file copying</li>
+        <li>Combine flags like <strong>cp -rv</strong> for recursive and verbose copying</li>
+    </ul>
+
+    <h2>❗ Common Mistakes</h2>
+    <ul>
+        <li>Forgetting -r when copying folders</li>
+        <li>Overwriting files unintentionally</li>
+        <li>Incorrect destination path</li>
+        <li>Not using quotes for filenames with spaces</li>
+        <li>Example: <span class="code">cp "My File.txt" /home/user/</span></li>
+    </ul>
+
+    <h2>📚 Practice Exercises</h2>
+    <ol>
+        <li>Copy a file to another directory</li>
+        <li>Create a backup copy of a configuration file</li>
+        <li>Copy an entire folder using recursive option</li>
+        <li>Copy files with verbose output enabled</li>
+    </ol>
+
+</div>
+
+<footer>
+    <p>Linux Learning Project | Command Documentation: cp</p>
+</footer>
+
+</body>
+</html>

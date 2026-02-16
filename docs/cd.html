@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux cd Command - Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #7dd3fc; border-bottom: 1px solid #1e293b; padding-bottom: 5px; }
+        h3 { color: #bae6fd; }
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            border-left: 4px solid #38bdf8;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background-color: #020617; color: #38bdf8; }
+        tr:nth-child(even) { background-color: #020617; }
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Linux Command: cd</h1>
+    <p>Complete Beginner to Advanced Guide</p>
+</header>
+
+<div class="container">
+
+    <h2>📌 Overview</h2>
+    <p>The <strong>cd</strong> (Change Directory) command is used to navigate between directories in Linux. It allows users to move through the file system efficiently.</p>
+    
+    <div class="tag">Category: Navigation</div>
+    <div class="tag">Difficulty: Beginner</div>
+
+    <h2>🧾 Syntax</h2>
+    <div class="code">cd [DIRECTORY]</div>
+    <p>If no directory is specified, the command moves to the user's home directory.</p>
+
+    <h2>🟢 Basic cd Commands (Beginner)</h2>
+
+    <h3>1. Go to a Specific Directory</h3>
+    <div class="code">cd Documents</div>
+    <p>Moves into the "Documents" directory inside the current folder.</p>
+
+    <h3>2. Go Back to Home Directory</h3>
+    <div class="code">cd</div>
+    <p>Returns to the user's home directory.</p>
+
+    <h3>3. Go to Parent Directory</h3>
+    <div class="code">cd ..</div>
+    <p>Moves one level up from the current directory.</p>
+
+    <h3>4. Go to Root Directory</h3>
+    <div class="code">cd /</div>
+    <p>Navigates directly to the root (/) directory.</p>
+
+    <h3>5. Go to Previous Directory</h3>
+    <div class="code">cd -</div>
+    <p>Switches back to the last visited directory.</p>
+
+    <h2>🟡 Intermediate Usage</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>cd ~</td>
+            <td>Go to home directory</td>
+        </tr>
+        <tr>
+            <td>cd /home/user</td>
+            <td>Navigate using absolute path</td>
+        </tr>
+        <tr>
+            <td>cd ../folder</td>
+            <td>Move up one level and enter a folder</td>
+        </tr>
+        <tr>
+            <td>cd ./folder</td>
+            <td>Enter a folder in the current directory</td>
+        </tr>
+        <tr>
+            <td>cd ../../</td>
+            <td>Move up two directory levels</td>
+        </tr>
+    </table>
+
+    <h2>🔵 Absolute vs Relative Paths</h2>
+
+    <h3>Absolute Path</h3>
+    <div class="code">cd /var/log</div>
+    <p>Starts from the root directory (/). Works from anywhere in the system.</p>
+
+    <h3>Relative Path</h3>
+    <div class="code">cd logs</div>
+    <p>Starts from the current directory.</p>
+
+    <h2>🔥 Real-World Examples</h2>
+
+    <h3>Navigate to Downloads Folder</h3>
+    <div class="code">cd ~/Downloads</div>
+
+    <h3>Navigate to Desktop</h3>
+    <div class="code">cd ~/Desktop</div>
+
+    <h3>Move Back Two Directories</h3>
+    <div class="code">cd ../..</div>
+
+    <h2>🧠 Pro Tips for Beginners</h2>
+    <ul>
+        <li>Use <strong>pwd</strong> to check your current directory before using cd</li>
+        <li>Use Tab key for auto-completion of directory names</li>
+        <li>~ represents the home directory</li>
+        <li>cd - is very useful for switching between two directories</li>
+    </ul>
+
+    <h2>⚠️ Common Mistakes</h2>
+    <ul>
+        <li>Using wrong folder name (Linux is case-sensitive)</li>
+        <li>Forgetting spaces in directory names (use quotes)</li>
+        <li>Example: <span class="code">cd "My Folder"</span></li>
+    </ul>
+
+    <h2>📚 Practice Exercises</h2>
+    <ol>
+        <li>Navigate to your home directory</li>
+        <li>Move into a specific folder using relative path</li>
+        <li>Go back to the previous directory using cd -</li>
+        <li>Navigate to the root directory</li>
+    </ol>
+
+</div>
+
+<footer>
+    <p>Linux Learning Project | Command Documentation: cd</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux mv Command - Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #7dd3fc; border-bottom: 1px solid #1e293b; padding-bottom: 5px; }
+        h3 { color: #bae6fd; }
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            border-left: 4px solid #38bdf8;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background-color: #020617; color: #38bdf8; }
+        tr:nth-child(even) { background-color: #020617; }
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Linux Command: mv</h1>
+    <p>Complete Beginner to Advanced Guide</p>
+</header>
+
+<div class="container">
+
+    <h2>📌 Overview</h2>
+    <p>The <strong>mv</strong> (Move) command is used to move or rename files and directories in Linux. It is a core command for file management and organization.</p>
+    
+    <div class="tag">Category: File Management</div>
+    <div class="tag">Difficulty: Beginner</div>
+
+    <h2>🧾 Syntax</h2>
+    <div class="code">mv [OPTIONS] SOURCE DESTINATION</div>
+    <p>The source is the file or folder you want to move, and the destination is the new location or new name.</p>
+
+    <h2>🟢 Basic mv Commands (Beginner)</h2>
+
+    <h3>1. Rename a File</h3>
+    <div class="code">mv oldname.txt newname.txt</div>
+    <p>Renames a file from <strong>oldname.txt</strong> to <strong>newname.txt</strong>.</p>
+
+    <h3>2. Move File to Another Directory</h3>
+    <div class="code">mv file.txt /home/user/Documents/</div>
+    <p>Moves the file to the specified directory.</p>
+
+    <h3>3. Move Multiple Files</h3>
+    <div class="code">mv file1.txt file2.txt /home/user/Documents/</div>
+    <p>Moves multiple files into a destination folder.</p>
+
+    <h3>4. Move a Directory</h3>
+    <div class="code">mv folder/ /home/user/Backup/</div>
+    <p>Moves an entire directory to another location.</p>
+
+    <h2>🟡 Intermediate Options</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>mv -i file.txt dest/</td>
+            <td>Prompt before overwriting files</td>
+        </tr>
+        <tr>
+            <td>mv -v file.txt dest/</td>
+            <td>Show verbose output of the move operation</td>
+        </tr>
+        <tr>
+            <td>mv -n file.txt dest/</td>
+            <td>Do not overwrite an existing file</td>
+        </tr>
+        <tr>
+            <td>mv -u file.txt dest/</td>
+            <td>Move only if the source is newer than destination</td>
+        </tr>
+    </table>
+
+    <h2>🔵 Advanced mv Options (Pro Level)</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td>mv --backup file.txt dest/</td>
+            <td>Create a backup of destination file before overwriting</td>
+        </tr>
+        <tr>
+            <td>mv -t DEST SOURCE</td>
+            <td>Specify target directory explicitly</td>
+        </tr>
+        <tr>
+            <td>mv -f file.txt dest/</td>
+            <td>Force move without prompting</td>
+        </tr>
+    </table>
+
+    <h2>🔥 Real-World Examples</h2>
+
+    <h3>Rename a Folder</h3>
+    <div class="code">mv Projects Old_Projects</div>
+
+    <h3>Move Files to Backup Directory</h3>
+    <div class="code">mv *.log /home/user/backup/</div>
+
+    <h3>Move and Show Output</h3>
+    <div class="code">mv -v report.txt /home/user/Documents/</div>
+
+    <h2>⚠️ Overwriting Behavior</h2>
+    <p>By default, <strong>mv</strong> will overwrite files in the destination without warning. Use <strong>-i</strong> to get a confirmation prompt before overwriting important files.</p>
+
+    <h2>🧠 Pro Tips for Beginners</h2>
+    <ul>
+        <li>Use mv to both move and rename files</li>
+        <li>Use <strong>-i</strong> to prevent accidental overwrites</li>
+        <li>Use <strong>-v</strong> to see what files are being moved</li>
+        <li>Wildcards (*, ?) can be used to move multiple files at once</li>
+    </ul>
+
+    <h2>❗ Common Mistakes</h2>
+    <ul>
+        <li>Accidentally overwriting important files</li>
+        <li>Wrong destination path</li>
+        <li>Forgetting quotes for filenames with spaces</li>
+        <li>Example: <span class="code">mv "My File.txt" /home/user/</span></li>
+    </ul>
+
+    <h2>📚 Practice Exercises</h2>
+    <ol>
+        <li>Rename a file using mv</li>
+        <li>Move a file to another directory</li>
+        <li>Move multiple files using wildcards</li>
+        <li>Move a folder to a backup location</li>
+    </ol>
+
+</div>
+
+<footer>
+    <p>Linux Learning Project | Command Documentation: mv</p>
+</footer>
+
+</body>
+</html>

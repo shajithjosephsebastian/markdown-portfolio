@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux ls Command - Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #020617;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+        h1 { color: #38bdf8; }
+        h2 { color: #7dd3fc; border-bottom: 1px solid #1e293b; padding-bottom: 5px; }
+        h3 { color: #bae6fd; }
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: "Courier New", monospace;
+            border-left: 4px solid #38bdf8;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #1e293b;
+            padding: 10px;
+            text-align: left;
+        }
+        th { background-color: #020617; color: #38bdf8; }
+        tr:nth-child(even) { background-color: #020617; }
+        .tag {
+            display: inline-block;
+            background: #1e293b;
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Linux Command: ls</h1>
+    <p>Complete Beginner to Advanced Guide</p>
+</header>
+
+<div class="container">
+
+    <h2>📌 Overview</h2>
+    <p>The <strong>ls</strong> command is used to list files and directories in Linux. It is one of the most basic and important commands for navigating the file system.</p>
+    
+    <div class="tag">Category: File Management</div>
+    <div class="tag">Difficulty: Beginner</div>
+
+    <h2>🧾 Syntax</h2>
+    <div class="code">ls [OPTIONS] [DIRECTORY]</div>
+    <p>If no directory is specified, it lists files in the current directory.</p>
+
+    <h2>🟢 Basic ls Commands (Beginner)</h2>
+
+    <h3>1. List Files in Current Directory</h3>
+    <div class="code">ls</div>
+    <p>Displays all visible files and folders in the current directory.</p>
+
+    <h3>2. Long Listing Format</h3>
+    <div class="code">ls -l</div>
+    <p>Shows detailed information like permissions, owner, size, and modification date.</p>
+
+    <h3>3. Show Hidden Files</h3>
+    <div class="code">ls -a</div>
+    <p>Displays hidden files (files starting with a dot).</p>
+
+    <h3>4. Long Format + Hidden Files (Most Used)</h3>
+    <div class="code">ls -la</div>
+    <p>Shows all files including hidden ones with detailed information.</p>
+
+    <h3>5. Human Readable Sizes</h3>
+    <div class="code">ls -lh</div>
+    <p>Displays file sizes in KB, MB, or GB instead of bytes.</p>
+
+    <h2>🟡 Intermediate Options</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>ls -R</td>
+            <td>List files recursively in subdirectories</td>
+        </tr>
+        <tr>
+            <td>ls -t</td>
+            <td>Sort files by modification time (newest first)</td>
+        </tr>
+        <tr>
+            <td>ls -S</td>
+            <td>Sort files by size (largest first)</td>
+        </tr>
+        <tr>
+            <td>ls -r</td>
+            <td>Reverse the sorting order</td>
+        </tr>
+        <tr>
+            <td>ls -1</td>
+            <td>Display one file per line</td>
+        </tr>
+        <tr>
+            <td>ls -d */</td>
+            <td>Show only directories</td>
+        </tr>
+    </table>
+
+    <h2>🔵 Advanced ls Options (Pro Level)</h2>
+    <table>
+        <tr>
+            <th>Command</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td>ls -i</td>
+            <td>Show inode numbers (useful in forensics)</td>
+        </tr>
+        <tr>
+            <td>ls -lu</td>
+            <td>Show last access time</td>
+        </tr>
+        <tr>
+            <td>ls -lc</td>
+            <td>Show last metadata change time</td>
+        </tr>
+        <tr>
+            <td>ls -ln</td>
+            <td>Show numeric UID and GID instead of names</td>
+        </tr>
+        <tr>
+            <td>ls -F</td>
+            <td>Display file type indicators (/ for directory, * for executable)</td>
+        </tr>
+        <tr>
+            <td>ls --full-time</td>
+            <td>Show full timestamp with seconds</td>
+        </tr>
+    </table>
+
+    <h2>🔥 Most Useful Real-World Combinations</h2>
+
+    <h3>Developer Favorite</h3>
+    <div class="code">ls -lah</div>
+    <p>Shows all files (including hidden) in long format with human-readable sizes.</p>
+
+    <h3>Sort Files by Size (Readable)</h3>
+    <div class="code">ls -lhS</div>
+
+    <h3>Detailed Recursive Listing</h3>
+    <div class="code">ls -lR</div>
+
+    <h2>📁 Example with Directory Path</h2>
+    <div class="code">ls /home/user/Documents</div>
+    <p>Lists files inside a specific directory path.</p>
+
+    <h2>🧠 Pro Tips for Beginners</h2>
+    <ul>
+        <li>Hidden files in Linux start with a dot (.)</li>
+        <li>Use <strong>ls -la</strong> to see everything in a directory</li>
+        <li>Combine options like <strong>ls -lh</strong> for better readability</li>
+        <li>Great for cybersecurity, file auditing, and system navigation</li>
+    </ul>
+
+    <h2>📚 Practice Exercises</h2>
+    <ol>
+        <li>List all hidden files in your home directory</li>
+        <li>Sort files by size using ls command</li>
+        <li>Display files with human-readable sizes</li>
+        <li>Recursively list all files in a folder</li>
+    </ol>
+
+</div>
+
+<footer>
+    <p>Linux Learning Project | Command Documentation: ls</p>
+</footer>
+
+</body>
+</html>
